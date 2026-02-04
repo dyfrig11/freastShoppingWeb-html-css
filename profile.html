@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Couture Ville</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+<div class="header">
+  <div class="container-head">
+    <!-- LEFT MENU ICON -->
+    <div class="left">
+      <img
+        src="assets/icons/Menu.png"
+        alt="Menu"
+        class="menu-icon"
+        id="menuBtn"
+      />
+    </div>
+
+    <!-- LOGO TENGAH -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo-freast-new.png" alt="Couture Ville Logo" />
+      </a>
+    </div>
+
+    <!-- ICONS RIGHT -->
+    <div class="header-icons-right">
+      <div class="search">
+        <img src="assets/gif/2mb.gif" />
+    </div>
+      <div class="keranjang">
+        <img
+          src="assets/icons/shpbag.png"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#cartSidebar"
+        />
+      </div>
+      <div class="profile">
+        <a href="profile.html">
+          <img src="assets/icons/prfl.png" alt="Profile" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div
+  class="akun-saya-container"
+  style="max-width: 800px; margin: 40px auto 20px; padding: 20px"
+>
+  <h1 class="fw-bold" style="font-size: 24px">Akun Saya</h1>
+
+  <div
+    class="promo-box d-flex flex-column flex-md-row justify-content-between align-items-center p-3 mb-3 bg-white border rounded"
+  >
+    <div class="text-section mb-3 mb-md-0 me-md-3">
+      <h2 class="fw-bold mb-2" style="font-size: 16px">
+        Nikmati Diskon Spesial dan Pantau Pesanan Kamu
+      </h2>
+      <p class="mb-0 text-muted" style="font-size: 14px">
+        Dapatkan diskon eksklusif sambil melacak pesanan dan percakapan
+        kamu dengan mudah. Tetap terhubung dengan kami dan selalu tahu
+        perkembangan pembelian kamu, semua dalam satu platform.
+      </p>
+    </div>
+
+    <div
+      class="button-section d-flex flex-column flex-md-row gap-2 w-100 w-md-auto"
+    >
+      <button
+  class="btn btn-login w-100 w-md-auto"
+  data-bs-toggle="modal"
+  data-bs-target="#loginModal"
+>
+  Login
+</button>
+<button
+  class="btn btn-register w-100 w-md-auto"
+  data-bs-toggle="modal"
+  data-bs-target="#registerModal"
+>
+  Daftar
+</button>
+    </div>
+  </div>
+
+  <div class="order-box bg-white border rounded">
+    <ul class="nav nav-tabs" id="akunTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active fw-bold"
+          id="pesanan-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#pesanan"
+          type="button"
+          role="tab"
+        >
+          Pesanan
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link fw-bold"
+          id="wishlist-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#wishlist"
+          type="button"
+          role="tab"
+        >
+          Wishlist
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content p-4" id="akunTabContent">
+      <div class="tab-pane fade show active" id="pesanan" role="tabpanel">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Order Saya (0)</span>
+          <select class="form-select w-auto">
+            <option>Semua status</option>
+          </select>
+        </div>
+        <div class="text-center text-muted py-5">
+          <div style="font-size: 40px" class="mb-2">📦</div>
+          <div class="fw-bold mb-1">Tidak ada pesanan</div>
+          <div>Silakan buat pesanan untuk melihatnya disini.</div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="wishlist" role="tabpanel">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold">Wishlist Saya (0)</span>
+        </div>
+        <div class="text-center text-muted py-5">
+          <div style="font-size: 40px" class="mb-2">❤️</div>
+          <div class="fw-bold mb-1">Wishlist kosong</div>
+          <div>
+            Tambahkan produk favoritmu ke wishlist untuk melihatnya disini.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SIDEBAR MENU ===== -->
+    <div id="sidebarMenu" class="sidebar">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <ul class="menu-list">
+        <li><a href="cvilleweb.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Your Cart</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="cart-items">
+          <div class="cart-item d-flex align-items-center mb-3">
+            <img
+              src="assets/images/tshirt.jpg"
+              width="60"
+              class="me-3 rounded"
+            />
+            <div>
+              <h6 class="mb-0">T-Shirt</h6>
+              <small class="text-muted">Rp 150.000</small>
+            </div>
+            <button class="btn btn-sm btn-outline-danger remove-item">−</button>
+          </div>
+
+          <div class="cart-item d-flex align-items-center mb-3">
+            <img
+              src="assets/images/pants.jpg"
+              width="60"
+              class="me-3 rounded"
+            />
+            <div>
+              <h6 class="mb-0">Pants</h6>
+              <small class="text-muted">Rp 200.000</small>
+            </div>
+            <button class="btn btn-sm btn-outline-danger remove-item">−</button>
+          </div>
+        </div>
+
+        <hr />
+        <div class="d-flex justify-content-between fw-bold mb-3">
+          <span>Total</span>
+          <span>Rp 350.000</span>
+        </div>
+
+        <button class="btn btn-dark w-100 mb-4">Checkout</button>
+
+        <div class="suggestion">
+  <h6 class="mb-3">You may also like</h6>
+  <div class="row g-3">
+    <div class="col-6">
+      <div class="card border-0">
+        <div class="position-relative">
+          <a href="produk.html">
+            <img
+              src="assets/images/outer.jpg"
+              class="card-img-top rounded"
+            />
+          </a>
+          <span
+            class="badge badge-gray position-absolute top-0 start-0 m-2"
+            >Stok menipis</span
+          >
+        </div>
+        <div class="card-body p-2">
+          <p class="card-title small mb-1 fw-bold">outer</p>
+          <p class="text-danger fw-bold small mb-0">Rp 649.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card border-0">
+        <div class="position-relative">
+          <a href="produk.html">
+            <img
+              src="assets/images/hat.jpg"
+              class="card-img-top rounded"
+            />
+          </a>
+          <span
+            class="badge badge-gray position-absolute top-0 start-0 m-2"
+            >Stok menipis</span
+          >
+        </div>
+        <div class="card-body p-2">
+          <p class="card-title small mb-1 fw-bold">Hat</p>
+          <p class="text-danger fw-bold small mb-0">Rp 389.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card border-0">
+        <div class="position-relative">
+          <a href="produk.html">
+            <img
+              src="assets/images/socks.png"
+              class="card-img-top rounded"
+            />
+          </a>
+        </div>
+        <div class="card-body p-2">
+          <p class="card-title small mb-1 fw-bold">Socks</p>
+          <p class="text-danger fw-bold small mb-0">Rp 99.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Modal Register -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-register">
+          <div class="modal-header">
+            <h5 class="modal-title">Daftar</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="input-group-icon mb-3">
+                <i class="fas fa-user"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nama Lengkap Kamu*"
+                />
+              </div>
+              <div class="input-group-icon mb-3">
+                <i class="fas fa-envelope"></i>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email kamu"
+                />
+              </div>
+              <div class="input-group-icon mb-4">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Kata sandi"
+                />
+              </div>
+              <button type="submit" class="btn btn-register-submit w-100 mt-3">
+                Buat akun baru
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Login -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-register">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="input-group-icon mb-3">
+                <i class="fas fa-user"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Email/Nomor HP Kamu"
+                />
+              </div>
+              <button type="submit" class="btn btn-register-submit w-100 mt-3">
+                Selanjutnya
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/menu.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

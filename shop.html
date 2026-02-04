@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Couture Ville</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ===== HEADER ===== -->
+<div class="header">
+  <div class="container-head">
+    <!-- LEFT MENU ICON -->
+    <div class="left">
+      <img
+        src="assets/icons/Menu.png"
+        alt="Menu"
+        class="menu-icon"
+        id="menuBtn"
+      />
+    </div>
+
+    <!-- LOGO TENGAH -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo-freast-new.png" alt="Couture Ville Logo" />
+      </a>
+    </div>
+
+    <!-- ICONS RIGHT -->
+    <div class="header-icons-right">
+      <div class="search">
+        <img src="assets/gif/2mb.gif" />
+    </div>
+      <div class="keranjang">
+        <img
+          src="assets/icons/shpbag.png"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#cartSidebar"
+        />
+      </div>
+      <div class="profile">
+        <a href="profile.html">
+          <img src="assets/icons/prfl.png" alt="Profile" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div id="sidebarMenu" class="sidebar">
+      <button class="close-btn" id="closeBtn">&times;</button>
+      <ul class="menu-list">
+        <li><a href="cvilleweb.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Your Cart</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="cart-items">
+          <div class="cart-item d-flex align-items-center mb-3">
+            <img
+              src="assets/images/tshirt.jpg"
+              width="60"
+              class="me-3 rounded"
+            />
+            <div>
+              <h6 class="mb-0">T-Shirt</h6>
+              <small class="text-muted">Rp 150.000</small>
+            </div>
+            <button class="btn btn-sm btn-outline-danger remove-item">−</button>
+          </div>
+
+          <div class="cart-item d-flex align-items-center mb-3">
+            <img
+              src="assets/images/pants.jpg"
+              width="60"
+              class="me-3 rounded"
+            />
+            <div>
+              <h6 class="mb-0">Pants</h6>
+              <small class="text-muted">Rp 200.000</small>
+            </div>
+            <button class="btn btn-sm btn-outline-danger remove-item">−</button>
+          </div>
+        </div>
+
+        <hr />
+        <div class="d-flex justify-content-between fw-bold mb-3">
+          <span>Total</span>
+          <span>Rp 350.000</span>
+        </div>
+
+        <button class="btn btn-dark w-100 mb-4">Checkout</button>
+
+        <div class="suggestion">
+  <h6 class="mb-3">You may also like</h6>
+  <div class="row g-3">
+    <div class="col-6">
+      <div class="card border-0">
+        <div class="position-relative">
+          <a href="produk.html">
+            <img
+              src="assets/images/outer.jpg"
+              class="card-img-top rounded"
+            />
+          </a>
+          <span
+            class="badge badge-gray position-absolute top-0 start-0 m-2"
+            >Stok menipis</span
+          >
+        </div>
+        <div class="card-body p-2">
+          <p class="card-title small mb-1 fw-bold">outer</p>
+          <p class="text-danger fw-bold small mb-0">Rp 649.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card border-0">
+        <div class="position-relative">
+          <a href="produk.html">
+            <img
+              src="assets/images/hat.jpg"
+              class="card-img-top rounded"
+            />
+          </a>
+          <span
+            class="badge badge-gray position-absolute top-0 start-0 m-2"
+            >Stok menipis</span
+          >
+        </div>
+        <div class="card-body p-2">
+          <p class="card-title small mb-1 fw-bold">Hat</p>
+          <p class="text-danger fw-bold small mb-0">Rp 389.000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="card border-0">
+        <div class="position-relative">
+          <a href="produk.html">
+            <img
+              src="assets/images/socks.png"
+              class="card-img-top rounded"
+            />
+          </a>
+        </div>
+        <div class="card-body p-2">
+          <p class="card-title small mb-1 fw-bold">Socks</p>
+          <p class="text-danger fw-bold small mb-0">Rp 99.000</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <div class="row">
+        <aside class="col-md-3 pe-4">
+          <div class="card filter-card p-3">
+            <input
+              id="searchInput"
+              class="form-control mb-3"
+              placeholder="Cari produk..."
+            />
+
+            <div class="mb-3">
+              <h6 class="mb-2">Kategori</h6>
+              <div>
+                <label class="d-flex align-items-center"
+                  ><input
+                    type="checkbox"
+                    class="cat-filter me-2"
+                    value="jackets"
+                  />
+                  Jackets</label
+                >
+                <label class="d-flex align-items-center"
+                  ><input type="checkbox" class="cat-filter me-2" value="tee" />
+                  Tee</label
+                >
+                <label class="d-flex align-items-center"
+                  ><input
+                    type="checkbox"
+                    class="cat-filter me-2"
+                    value="outer"
+                  />
+                  Hoodies/Outer</label
+                >
+                <label class="d-flex align-items-center"
+                  ><input
+                    type="checkbox"
+                    class="cat-filter me-2"
+                    value="pants"
+                  />
+                  Pants/Shorts</label
+                >
+                <label class="d-flex align-items-center"
+                  ><input
+                    type="checkbox"
+                    class="cat-filter me-2"
+                    value="accessories"
+                  />
+                  Accessories</label
+                >
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="mb-2">Tipe Produk</h6>
+              <label class="d-block"
+                ><input type="radio" name="typeFilter" value="all" checked />
+                Semua Produk</label
+              >
+              <label class="d-block"
+                ><input type="radio" name="typeFilter" value="featured" />
+                Produk Unggulan</label
+              >
+            </div>
+
+            <div class="mb-3">
+              <h6 class="mb-2">Ketersediaan</h6>
+              <label class="d-block"
+                ><input type="radio" name="stockFilter" value="all" checked />
+                Semua</label
+              >
+              <label class="d-block"
+                ><input type="radio" name="stockFilter" value="instock" /> Ada
+                Stok</label
+              >
+            </div>
+
+            <div class="mb-3">
+              <h6 class="mb-2">Size</h6>
+              <div class="d-flex flex-wrap gap-2">
+                <button class="btn size-btn" data-size="XS">XS</button>
+                <button class="btn size-btn" data-size="S">S</button>
+                <button class="btn size-btn" data-size="M">M</button>
+                <button class="btn size-btn" data-size="L">L</button>
+                <button class="btn size-btn" data-size="XL">XL</button>
+                <button
+                  class="btn btn-outline-secondary btn-sm ms-auto"
+                  id="clearSize"
+                >
+                  Reset Size
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-3 d-grid">
+              <button class="btn btn-dark" id="resetFilters">
+                Reset Filter
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-md-9">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div></div>
+            <div>
+              <label class="me-2 small">Urutan :</label>
+              <select
+                id="sortSelect"
+                class="form-select d-inline-block"
+                style="width: 200px"
+              >
+                <option value="featured">Unggulan</option>
+                <option value="new">Terbaru</option>
+                <option value="low">Harga Terendah</option>
+                <option value="high">Harga Tertinggi</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="productsGrid" class="row g-4">
+  <div class="col-12 col-sm-6 col-lg-4">
+    <article
+      class="product-card"
+      data-name="preface golden era leather jacket"
+      data-category="jackets"
+      data-instock="true"
+      data-sizes="M,L,XL"
+      data-price="649000"
+      data-featured="true"
+    >
+      <span class="badge-stock">STOK MENIPIS</span>
+      <a href="produk.html">
+        <img src="assets/images/outer.jpg" alt="" class="img-fluid" />
+      </a>
+
+      <button class="btn btn-dark w-100 mt-2">Add to Cart</button>
+
+      <div class="product-info mt-2">
+        <h6>outer</h6>
+        <div class="price text-danger">Rp 649.000</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-12 col-sm-6 col-lg-4">
+    <article
+      class="product-card"
+      data-name="preface ivy league denim"
+      data-category="pants"
+      data-instock="true"
+      data-sizes="M,L"
+      data-price="429000"
+      data-featured="false"
+    >
+      <span class="badge-stock">STOK MENIPIS</span>
+      <a href="produk.html">
+        <img src="assets/images/hat.jpg" alt="" class="img-fluid" />
+      </a>
+
+      <button class="btn btn-dark w-100 mt-2">Add to Cart</button>
+
+      <div class="product-info mt-2">
+        <h6>hat</h6>
+        <div class="price text-danger">Rp 429.000</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-12 col-sm-6 col-lg-4">
+    <article
+      class="product-card"
+      data-name="preface royal rugby shirt"
+      data-category="tee"
+      data-instock="true"
+      data-sizes="M,L,XL"
+      data-price="389000"
+      data-featured="false"
+    >
+      <span class="badge-stock">STOK MENIPIS</span>
+      <a href="produk.html">
+        <img src="assets/images/pants.jpg" alt="" class="img-fluid" />
+      </a>
+
+      <button class="btn btn-dark w-100 mt-2">Add to Cart</button>
+
+      <div class="product-info mt-2">
+        <h6>pants</h6>
+        <div class="price text-danger">Rp 389.000</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-12 col-sm-6 col-lg-4">
+    <article
+      class="product-card"
+      data-name="preface campus classic tee"
+      data-category="tee"
+      data-instock="true"
+      data-sizes="S,M,L"
+      data-price="249000"
+      data-featured="false"
+    >
+      <span class="badge-stock">STOK MENIPIS</span>
+      <a href="produk.html">
+        <img src="assets/images/tshirt.jpg" alt="" class="img-fluid" />
+      </a>
+
+      <button class="btn btn-dark w-100 mt-2">Add to Cart</button>
+
+      <div class="product-info mt-2">
+        <h6>tshirt</h6>
+        <div class="price text-danger">Rp 249.000</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-12 col-sm-6 col-lg-4">
+    <article
+      class="product-card"
+      data-name="preface university socks"
+      data-category="accessories"
+      data-instock="true"
+      data-sizes="ONE"
+      data-price="99000"
+      data-featured="false"
+    >
+      <span class="badge-stock-none"> </span>
+      <a href="produk.html">
+        <img src="assets/images/socks.png" alt="" class="img-fluid" />
+      </a>
+
+      <button class="btn btn-dark w-100 mt-2">Add to Cart</button>
+
+      <div class="product-info mt-2">
+        <h6>socks</h6>
+        <div class="price text-danger">Rp 99.000</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="col-12 col-sm-6 col-lg-4">
+    <article
+      class="product-card faded"
+      data-name="preface class of xvi bundling"
+      data-category="outer"
+      data-instock="false"
+      data-sizes="L,XL"
+      data-price="879000"
+      data-featured="true"
+    >
+      <span class="badge-stock-out">STOK HABIS</span>
+      <a href="produk.html">
+        <img src="assets/images/hoodie.jpg" alt="" class="img-fluid" />
+      </a>
+
+      <button class="btn btn-dark w-100 mt-2" disabled>
+        Add to Cart
+      </button>
+
+      <div class="product-info mt-2">
+        <h6>Bundling Package</h6>
+        <div class="price text-danger">Rp 879.000</div>
+      </div>
+    </article>
+  </div>
+</div>
+
+    <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
